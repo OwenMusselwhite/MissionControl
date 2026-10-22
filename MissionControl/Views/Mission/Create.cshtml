@@ -1,0 +1,54 @@
+@model MissionControl.Models.Mission
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Mission</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="MissionName" class="control-label"></label>
+                <input asp-for="MissionName" class="form-control" />
+                <span asp-validation-for="MissionName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DestinationPlanet" class="control-label"></label>
+                <input asp-for="DestinationPlanet" class="form-control" />
+                <span asp-validation-for="DestinationPlanet" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LaunchDate" class="control-label"></label>
+                <input asp-for="LaunchDate" class="form-control" />
+                <span asp-validation-for="LaunchDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MissionStatus" class="control-label"></label>
+                <input asp-for="MissionStatus" class="form-control" />
+                <span asp-validation-for="MissionStatus" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CrewMembers" class="control-label"></label>
+                <input asp-for="CrewMembers" class="form-control" />
+                <span asp-validation-for="CrewMembers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
